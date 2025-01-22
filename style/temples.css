@@ -1,1 +1,66 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+header {
+    background-color: purple;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    margin: 1rem auto;
+    max-width: 90%;
+    text-align: center;
+}
+
+.temple-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+figure img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: purple;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+footer span {
+    font-weight: bold;
+}
 
