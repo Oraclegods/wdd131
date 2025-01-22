@@ -1,5 +1,12 @@
-// Get the current year dynamically
-document.getElementById('currentyear').textContent = new Date().getFullYear();
+// getdates.js
+document.addEventListener("DOMContentLoaded", () => {
+    const yearSpan = document.getElementById("currentyear");
+    const lastModifiedSpan = document.getElementById("lastModified");
 
-// Get the last modified date of the document
-document.getElementById('lastModified').textContent = `Last Updated: ${document.lastModified}`;
+    // Set the current year dynamically
+    const currentYear = new Date().getFullYear();
+    yearSpan.textContent = currentYear;
+
+    // Set the last modified date dynamically
+    lastModifiedSpan.textContent = `Last Modification: ${document.lastModified}`;
+});
