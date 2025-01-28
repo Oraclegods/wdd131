@@ -12,6 +12,7 @@ body {
   box-sizing: border-box;
 }
 
+/* Header */
 header {
   background: rgba(0, 0, 0, 0.6);
   color: white;
@@ -41,18 +42,16 @@ nav ul li a {
   color: white;
 }
 
-/* Hero Section for PC: Image as background */
+/* Hero Section (Background Image for PC) */
 .hero {
   height: 60vh;
+  background-image: url('../images/2151474220-2.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--primary-color);
-}
-
-.hero img {
-  max-width: 100%;
-  height: auto;
 }
 
 /* Weather Section */
@@ -63,11 +62,15 @@ nav ul li a {
 
 .weather h2 {
   font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.weather p {
-  font-size: 1.2rem;
-  margin: 0.5em 0;
+.weather-icon {
+  width: 30px;
+  height: auto;
+  margin-left: 10px;
 }
 
 /* Data Section */
@@ -109,4 +112,23 @@ footer {
   color: white;
   padding: 1em;
   margin-top: 2em;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .hero {
+    height: auto;
+    background: none;
+  }
+
+  .hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+  }
 }
