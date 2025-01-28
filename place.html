@@ -6,8 +6,7 @@
   <title>Place Weather Page</title>
   <meta name="description" content="Explore our destination and discover the scenic views, weather updates, and exciting activities to enjoy.">
   <meta name="author" content="Folusho Sanni">
-  <link rel="stylesheet" href="style/place.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/place.css">
 </head>
 <body>
   <header>
@@ -22,31 +21,36 @@
   </header>
 
   <main>
-    <!-- Hero Section (Background Image) -->
-    <section class="hero"></section>
+    <!-- Hero Section -->
+    <section class="hero">
+      <picture>
+        <source srcset="images/2151474220-2.webp" type="image/webp" media="(min-width: 768px)">
+        <source srcset="images/2151474220-2.webp" type="image/jpeg" media="(min-width: 480px)">
+        <img src="images/2151474220-2.webp" alt="Scenic view of the destination">
+      </picture>
+      <div class="hero-content">
+        <section class="weather">
+          <h2>Weather <img src="images/weather-icon.svg" alt="Weather Icon" class="weather-icon"></h2>
+          <p>Temperature: 8°C</p>
+          <p>Wind Speed: 15 km/h</p>
+          <p>Wind Chill: <span id="wind-chill"></span></p>
+        </section>
 
-    <!-- Weather Section -->
-    <section class="weather">
-      <h2>Weather <img src="images/4102326_cloud_sun_sunny_weather_icon.svg" alt="Weather Icon" class="weather-icon"></h2>
-      <p>Temperature: 8°C</p>
-      <p>Wind Speed: 15 km/h</p>
-      <p>Wind Chill: <span id="wind-chill"></span></p>
-    </section>
-
-    <!-- Data Section -->
-    <section class="data">
-      <h2>Data Highlights</h2>
-      <div class="data-item">
-        <h3>Location</h3>
-        <p>Mountain View, California</p>
-      </div>
-      <div class="data-item">
-        <h3>Attractions</h3>
-        <p>Scenic landscapes, hiking trails, and local markets.</p>
-      </div>
-      <div class="data-item">
-        <h3>Activities</h3>
-        <p>Kayaking, bird-watching, and photography tours.</p>
+        <section class="data">
+          <h2>Data Highlights</h2>
+          <div class="data-item">
+            <h3>Location</h3>
+            <p>Mountain View, California</p>
+          </div>
+          <div class="data-item">
+            <h3>Attractions</h3>
+            <p>Scenic landscapes, hiking trails, and local markets.</p>
+          </div>
+          <div class="data-item">
+            <h3>Activities</h3>
+            <p>Kayaking, bird-watching, and photography tours.</p>
+          </div>
+        </section>
       </div>
     </section>
   </main>
