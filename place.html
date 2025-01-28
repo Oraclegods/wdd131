@@ -6,58 +6,50 @@
   <title>Place Weather Page</title>
   <meta name="description" content="Explore our destination and discover the scenic views, weather updates, and exciting activities to enjoy.">
   <meta name="author" content="Folusho Sanni">
-  <link rel="stylesheet" href="style/place.css">
+  <link rel="stylesheet" href="styles/place.css">
 </head>
 <body>
   <header>
-    <h1>Explore Our Destination</h1>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Gallery</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
+    <h1>Madagascar</h1>
   </header>
 
   <main>
-    <!-- Hero Section -->
+    <!-- Hero Section (Background Image for PC, Inline Image for Mobile) -->
     <section class="hero">
       <picture>
-        <source srcset="images/2151474220-2.webp" type="image/webp" media="(min-width: 768px)">
-        <source srcset="images/2151474220-2.webp" type="image/jpeg" media="(min-width: 480px)">
-        <img src="images/2151474220-2.webp" alt="Scenic view of the destination">
+        <source srcset="images/2151474220-2.webp" media="(min-width: 768px)">
+        <img src="images/2151474220-2.webp" alt="Scenic view of Madagascar">
       </picture>
-      <div class="hero-content">
-        <section class="weather">
-          <h2>Weather <img src="images/weather-icon.svg" alt="Weather Icon" class="weather-icon"></h2>
-          <p>Temperature: 8°C</p>
-          <p>Wind Speed: 15 km/h</p>
-          <p>Wind Chill: <span id="wind-chill"></span></p>
-        </section>
-
-        <section class="data">
-          <h2>Data Highlights</h2>
-          <div class="data-item">
-            <h3>Location</h3>
-            <p>Mountain View, California</p>
-          </div>
-          <div class="data-item">
-            <h3>Attractions</h3>
-            <p>Scenic landscapes, hiking trails, and local markets.</p>
-          </div>
-          <div class="data-item">
-            <h3>Activities</h3>
-            <p>Kayaking, bird-watching, and photography tours.</p>
-          </div>
-        </section>
-      </div>
     </section>
+
+    <div class="content-container">
+      <!-- Data Section -->
+      <section class="data">
+        <h2>Data</h2>
+        <p><strong>Area:</strong> 587,041 sq km</p>
+        <p><strong>Population:</strong> 27,691,018</p>
+        <p><strong>Capital:</strong> Antananarivo</p>
+        <p><strong>Languages:</strong> Malagasy, French</p>
+        <p><strong>Currency:</strong> Malagasy Ariary</p>
+        <p><strong>Time Zone:</strong> UTC+3</p>
+        <p><strong>Calling Code:</strong> +261</p>
+        <p><strong>Internet TLD:</strong> .mg</p>
+      </section>
+
+      <!-- Weather Section -->
+      <section class="weather">
+        <h2>Weather <img src="images/4102326_cloud_sun_sunny_weather_icon.svg" alt="Weather Icon" class="weather-icon"></h2>
+        <p><strong>Temperature:</strong> 10°C</p>
+        <p><strong>Conditions:</strong> Partly Cloudy</p>
+        <p><strong>Wind:</strong> 5 km/h</p>
+        <p><strong>Wind Chill:</strong> 9.8°C</p>
+      </section>
+    </div>
   </main>
 
   <footer>
-    <p>&copy; 2024 &#127800; Folusho Sanni Nigeria &#127800;</p>
-    <p>&copy; <span id="current-year"></span> | Last Updated: <span id="last-modified"></span></p>
+    <p>&copy; 2024 🌸 Folusho Sanni 🌸 Madagascar</p>
+    <p>Last Modification: <span id="last-modified"></span></p>
   </footer>
 
   <script src="scripts/place.js" defer></script>
