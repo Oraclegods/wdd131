@@ -6,7 +6,7 @@
   <title>Place Weather Page</title>
   <meta name="description" content="Explore our destination and discover the scenic views, weather updates, and exciting activities to enjoy.">
   <meta name="author" content="Folusho Sanni">
-  <link rel="stylesheet" href="style/place.css">
+  <link rel="stylesheet" href="styles/place.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -22,18 +22,12 @@
   </header>
 
   <main>
-    <!-- Hero Section -->
-    <section class="hero">
-      <picture>
-        <source srcset="images/2151474220-2.webp" type="image/webp">
-        <source srcset="images/2151474220-2.webp" type="image/jpeg">
-        <img src="images/2151474220-2.webp" alt="Scenic view of the destination">
-      </picture>
-    </section>
+    <!-- Hero Section (Background Image) -->
+    <section class="hero"></section>
 
     <!-- Weather Section -->
     <section class="weather">
-      <h2>Weather <span class="weather-icon">⛅</span></h2>
+      <h2>Weather <img src="images/4102326_cloud_sun_sunny_weather_icon.svg" alt="Weather Icon" class="weather-icon"></h2>
       <p>Temperature: 8°C</p>
       <p>Wind Speed: 15 km/h</p>
       <p>Wind Chill: <span id="wind-chill"></span></p>
@@ -58,7 +52,7 @@
   </main>
 
   <footer>
-      <p>&copy; 2024 &#127800; Folusho Sanni Nigeria &#127800; </p>
+    <p>&copy; 2024 &#127800; Folusho Sanni Nigeria &#127800;</p>
     <p>&copy; <span id="current-year"></span> | Last Updated: <span id="last-modified"></span></p>
   </footer>
 
