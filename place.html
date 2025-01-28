@@ -4,7 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Place Weather Page</title>
-  <link rel="stylesheet" href="style/place.css">
+  <meta name="description" content="Explore our destination and discover the scenic views, weather updates, and exciting activities to enjoy.">
+  <meta name="author" content="Student Name">
+  <link rel="stylesheet" href="styles/place.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
@@ -21,7 +24,11 @@
   <main>
     <!-- Hero Section -->
     <section class="hero">
-      <img src="images/pexels-dhgphotography-29538990.jpg" alt="Scenic view of the destination">
+      <picture>
+        <source srcset="images/pexels-dhgphotography-29538990.webp" type="image/webp">
+        <source srcset="images/pexels-dhgphotography-optimized.jpg" type="image/jpeg">
+        <img src="images/pexels-dhgphotography-optimized.jpg" alt="Scenic view of the destination">
+      </picture>
     </section>
 
     <!-- Weather Section -->
