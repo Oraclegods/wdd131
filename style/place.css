@@ -1,10 +1,14 @@
-/* General Styles */
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Global Variables */
 :root {
   --main-font: 'Roboto', sans-serif;
   --primary-color: #333;
   --secondary-color: #f9f9f9;
 }
 
+/* General Styles */
 body {
   font-family: var(--main-font);
   margin: 0;
@@ -42,22 +46,40 @@ nav ul li a {
   color: white;
 }
 
-/* Hero Section (Background Image for PC) */
+/* Hero Section */
 .hero {
-  height: 60vh;
-  background-image: url('../images/2151474220-2.webp');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 60vh;
+  overflow: hidden;
+}
+
+.hero picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Hero Content (Weather & Data on Opposite Sides) */
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  color: white;
+  text-align: center;
 }
 
 /* Weather Section */
-.weather {
-  padding: 2em;
-  text-align: center;
+.weather, .data {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1.5em;
+  border-radius: 10px;
 }
 
 .weather h2 {
@@ -74,35 +96,18 @@ nav ul li a {
 }
 
 /* Data Section */
-.data {
-  padding: 2em;
-  text-align: left;
-  background-color: var(--secondary-color);
-}
-
 .data h2 {
-  text-align: center;
   font-size: 2rem;
-  margin-bottom: 1em;
 }
 
 .data-item {
   margin: 1em 0;
   padding: 1em;
-  background-color: #ffffff;
+  background-color: white;
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.data-item h3 {
-  margin-bottom: 0.5em;
-}
-
-::after {
-  content: "";
-  display: block;
-  clear: both;
+  color: black;
 }
 
 /* Footer */
@@ -118,17 +123,25 @@ footer {
 @media screen and (max-width: 768px) {
   .hero {
     height: auto;
-    background: none;
-  }
-
-  .hero img {
-    width: 100%;
-    height: auto;
     display: block;
   }
 
-  nav ul {
+  .hero picture img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .hero-content {
     flex-direction: column;
     text-align: center;
+    position: static;
+    transform: none;
+    width: 100%;
+  }
+
+  .weather, .data {
+    width: 90%;
+    margin: 1em auto;
   }
 }
