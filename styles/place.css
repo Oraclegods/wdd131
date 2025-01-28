@@ -1,6 +1,19 @@
-/* Import Google Fonts (Use in HTML Instead) */
-/* Removed @import */
+/* Local Fonts Setup */
+@font-face {
+  font-family: 'Roboto';
+  src: url('fonts/Roboto-Regular.woff2') format('woff2'),
+       url('fonts/Roboto-Regular.woff') format('woff');
+  font-weight: 400;
+}
 
+@font-face {
+  font-family: 'Roboto';
+  src: url('fonts/Roboto-Bold.woff2') format('woff2'),
+       url('fonts/Roboto-Bold.woff') format('woff');
+  font-weight: 700;
+}
+
+/* Root Variables */
 :root {
   --primary-color: #C8102E;
   --secondary-color: #046A38;
@@ -31,24 +44,23 @@ header {
 .hero {
   position: relative;
   width: 100%;
-  height: 60vh; /* Adjust for large screens */
+  height: 60vh;
   background: url('../images/2151474220-2.webp') no-repeat center center/cover;
 }
 
-/* ✅ Added overlay div instead of using ::after */
+.hero img {
+  width: 100%;
+  display: none;
+}
+
 .hero-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.3); /* Adjust opacity as needed */
-}
-
-/* Hide inline image for large screens */
-.hero img {
-  width: 100%;
-  display: none;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
 }
 
 /* Content Container */
@@ -58,7 +70,6 @@ header {
   padding: 2rem;
 }
 
-/* Data & Weather Sections */
 .data, .weather {
   background: var(--white);
   padding: 20px;
@@ -66,7 +77,6 @@ header {
   width: 45%;
 }
 
-/* Weather Icon */
 .weather-icon {
   width: 40px;
   height: auto;
