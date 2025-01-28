@@ -33,8 +33,20 @@ header {
   width: 100%;
   height: 60vh; /* Adjust for large screens */
   background: url('../images/2151474220-2.webp') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+/* Instead of ::after, adding an actual div overlay */
+.hero-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Adjust transparency as needed */
+}
+
+/* Ensuring the image is hidden for larger screens */
 .hero img {
   width: 100%;
   display: none; /* Hide for large screens */
@@ -53,6 +65,8 @@ header {
   padding: 20px;
   box-shadow: 0 4px 8px var(--shadow-color);
   width: 45%;
+  position: relative;
+  z-index: 2; /* Ensuring it appears above the hero overlay */
 }
 
 /* Weather Icon */
