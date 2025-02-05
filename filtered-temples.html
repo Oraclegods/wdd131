@@ -7,12 +7,12 @@
     <meta name="author" content="Folusho Sanni">
     <title>Filtered Temple Album</title>
     <!-- Link CSS files -->
-    <link rel="stylesheet" href="styles/temples02.css">
-    <link rel="stylesheet" href="styles/temples_large02.css">
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <link rel="stylesheet" href="styles/filtered-temples-large.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <!-- Link JavaScript -->
-    <script src="scripts/temples02.js" defer></script>
+    <script src="scripts/filtered-temples.js" defer></script>
 </head>
 <body>
     <!-- Header Section -->
@@ -20,18 +20,18 @@
         <h1>Filtered Temple Album</h1>
         <nav>
             <ul>
-                <li><a href="#" id="home">Home</a></li>
-                <li><a href="#" id="old">Old</a></li>
-                <li><a href="#" id="new">New</a></li>
-                <li><a href="#" id="large">Large</a></li>
-                <li><a href="#" id="small">Small</a></li>
+                <li><a href="#" data-filter="all">Home</a></li>
+                <li><a href="#" data-filter="old">Old</a></li>
+                <li><a href="#" data-filter="new">New</a></li>
+                <li><a href="#" data-filter="large">Large</a></li>
+                <li><a href="#" data-filter="small">Small</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Main Content -->
     <main>
-        <h2>Home</h2>
+        <h2>Temple List</h2>
         <section class="temple-grid" id="templeContainer">
             <!-- Temple Cards will be dynamically generated here -->
         </section>
