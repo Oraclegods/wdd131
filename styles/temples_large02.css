@@ -1,3 +1,66 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+header {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.temple-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.temple-card {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.temple-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #343a40;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
 /* Larger Screens */
 @media (min-width: 768px) {
     .temple-grid {
@@ -6,11 +69,27 @@
 
     main {
         max-width: 70%;
+        margin: auto;
     }
 }
 
 @media (min-width: 1024px) {
     header nav ul {
         gap: 2rem;
+    }
+
+    .temple-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .temple-card {
+        padding: 20px;
+        max-width: 350px;
+        margin: auto;
+    }
+
+    .temple-card img {
+        height: 250px;
+        object-fit: cover;
     }
 }
