@@ -1,45 +1,49 @@
-const temples = [
-  {
-    templeName: "Aba Nigeria",
-    location: "Aba, Nigeria",
-    dedicated: "2005, August, 7",
-    area: 11500,
-    imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/aba-nigeria/400x250/aba-nigeria-temple-lds-273999-wallpaper.jpg"
-  },
-  {
-    templeName: "Manti Utah",
-    location: "Manti, Utah, United States",
-    dedicated: "1888, May, 21",
-    area: 74792,
-    imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/manti-utah/400x250/manti-temple-768192-wallpaper.jpg"
-  },
-  {
-    templeName: "Payson Utah",
-    location: "Payson, Utah, United States",
-    dedicated: "2015, June, 7",
-    area: 96630,
-    imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/payson-utah/400x225/payson-utah-temple-exterior-1416671-wallpaper.jpg"
-  }
-];
+/* temples02.css */
 
-const templeContainer = document.getElementById("templeContainer");
+/* General Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}
 
-temples.forEach(temple => {
-  const templeCard = document.createElement("div");
-  templeCard.classList.add("temple-card");
+header {
+  background-color: #343a40;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
 
-  templeCard.innerHTML = `
-    <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy">
-    <h3>${temple.templeName}</h3>
-    <p><strong>Location:</strong> ${temple.location}</p>
-    <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
-    <p><strong>Area:</strong> ${temple.area} sq. ft.</p>
-  `;
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
 
-  templeContainer.appendChild(templeCard);
-});
+nav ul li {
+  margin: 0 15px;
+}
 
-document.getElementById("lastModified").textContent = document.lastModified;
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+main {
+  padding: 20px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #343a40;
+  color: white;
+  /* Using relative positioning if the content height is enough */
+  position: relative;
+  width: 100%;
+}
