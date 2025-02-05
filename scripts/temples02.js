@@ -61,7 +61,7 @@ const temples = [
   // Three additional temple objects added:
   {
     templeName: "Salt Lake City Utah",
-    location: "Salt Lake City, Utah, United States",
+    location: "Salt Lake City, United States",
     dedicated: "1893, April, 6",
     area: 253015,
     imageUrl:
@@ -73,7 +73,7 @@ const temples = [
     dedicated: "1980, October, 27",
     area: 52000,
     imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/tokyo-japan/400x250/tokyo-japan-temple-876543-wallpaper.jpg"
+      "https://churchofjesuschristtemples.org/assets/img/temples/tokyo-japan-temple/tokyo-japan-temple-26340-main.jpg"
   },
   {
     templeName: "Johannesburg South Africa",
@@ -81,7 +81,7 @@ const temples = [
     dedicated: "1985, August, 24",
     area: 19000,
     imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/johannesburg-south-africa/400x250/johannesburg-south-africa-temple-654321-wallpaper.jpg"
+      "https://churchofjesuschristtemples.org/assets/img/temples/johannesburg-south-africa-temple/johannesburg-south-africa-temple-22475-main.jpg"
   }
 ];
 
