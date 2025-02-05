@@ -1,46 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Filtered Temple Album showcasing beautiful images and details of temples from around the world.">
-    <meta name="author" content="Folusho Sanni">
-    <title>Filtered Temple Album</title>
-    <!-- Link CSS files -->
-    <link rel="stylesheet" href="styles/temples02.css">
-    <link rel="stylesheet" href="styles/temples_large02.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Link JavaScript -->
-    <script src="scripts/temples02.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Filtered Temple Album showcasing beautiful images and details of temples from around the world." />
+  <meta name="author" content="Folusho Sanni" />
+  <title>Filtered Temple Album</title>
+  <!-- Link CSS files -->
+  <link rel="stylesheet" href="styles/temples02.css">
+  <link rel="stylesheet" href="styles/temples_large02.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Link JavaScript -->
+  <script src="scripts/temples02.js" defer></script>
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <h1>Filtered Temple Album</h1>
-        <nav>
-            <ul>
-                <li><a href="#" data-filter="all">Home</a></li>
-                <li><a href="#" data-filter="old">Old</a></li>
-                <li><a href="#" data-filter="new">New</a></li>
-                <li><a href="#" data-filter="large">Large</a></li>
-                <li><a href="#" data-filter="small">Small</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- Header Section -->
+  <header>
+    <h1>Filtered Temple Album</h1>
+    <nav>
+      <ul>
+        <li><a href="#" data-filter="all">Home</a></li>
+        <li><a href="#" data-filter="old">Old</a></li>
+        <li><a href="#" data-filter="new">New</a></li>
+        <li><a href="#" data-filter="large">Large</a></li>
+        <li><a href="#" data-filter="small">Small</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- Main Content -->
-    <main>
-        <h2>Temple List</h2>
-        <section class="temple-grid" id="templeContainer">
-            <!-- Temple Cards will be dynamically generated here -->
-        </section>
-    </main>
+  <!-- Main Content -->
+  <main>
+    <h2>Temple List</h2>
+    <!-- The temple cards will be generated dynamically -->
+    <section class="temple-grid" id="templeContainer"></section>
+  </main>
 
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2024 &#127800; Folusho Sanni Nigeria &#127800; </p>
-        <p>Last Modification: <span id="lastModified"></span></p>
-    </footer>
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2024 &#127800; Folusho Sanni Nigeria &#127800;</p>
+    <p>Last Modification: <span id="lastModified"></span></p>
+  </footer>
 </body>
 </html>
