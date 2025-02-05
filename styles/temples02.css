@@ -1,66 +1,45 @@
+const temples = [
+  {
+    templeName: "Aba Nigeria",
+    location: "Aba, Nigeria",
+    dedicated: "2005, August, 7",
+    area: 11500,
+    imageUrl:
+    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/aba-nigeria/400x250/aba-nigeria-temple-lds-273999-wallpaper.jpg"
+  },
+  {
+    templeName: "Manti Utah",
+    location: "Manti, Utah, United States",
+    dedicated: "1888, May, 21",
+    area: 74792,
+    imageUrl:
+    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/manti-utah/400x250/manti-temple-768192-wallpaper.jpg"
+  },
+  {
+    templeName: "Payson Utah",
+    location: "Payson, Utah, United States",
+    dedicated: "2015, June, 7",
+    area: 96630,
+    imageUrl:
+    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/payson-utah/400x225/payson-utah-temple-exterior-1416671-wallpaper.jpg"
+  }
+];
 
-/* General Styles */
-body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.5;
-}
+const templeContainer = document.getElementById("templeContainer");
 
-header {
-    background-color: purple;
-    color: white;
-    text-align: center;
-    padding: 1rem 0;
-}
+temples.forEach(temple => {
+  const templeCard = document.createElement("div");
+  templeCard.classList.add("temple-card");
 
-header nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-}
+  templeCard.innerHTML = `
+    <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy">
+    <h3>${temple.templeName}</h3>
+    <p><strong>Location:</strong> ${temple.location}</p>
+    <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
+    <p><strong>Area:</strong> ${temple.area} sq. ft.</p>
+  `;
 
-header nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
+  templeContainer.appendChild(templeCard);
+});
 
-header nav ul li a:hover {
-    text-decoration: underline;
-}
-
-main {
-    margin: 1rem auto;
-    max-width: 90%;
-    text-align: center;
-}
-
-.temple-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-}
-
-figure {
-    margin: 0;
-    padding: 0;
-}
-
-figure img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-footer {
-    background-color: purple;
-    color: white;
-    text-align: center;
-    padding: 1rem 0;
-}
-
-footer span {
-    font-weight: bold;
-}
+document.getElementById("lastModified").textContent = document.lastModified;
