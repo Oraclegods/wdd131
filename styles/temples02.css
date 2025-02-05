@@ -31,6 +31,14 @@ nav ul li a {
   text-decoration: none;
   font-size: 18px;
   font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+/* Combined hover and focus states for better accessibility */
+nav ul li a:hover,
+nav ul li a:focus {
+  color: #ccc;
+  outline: none; /* Optionally, add a custom focus style if needed */
 }
 
 main {
