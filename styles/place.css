@@ -1,111 +1,112 @@
-
-
-:root {
-  --primary-color: #C8102E;
-  --secondary-color: #046A38;
-  --white: #FFFFFF;
-  --text-color: #222;
-  --shadow-color: rgba(0, 0, 0, 0.1);
-  --font-family: 'Roboto', sans-serif;
-}
-
-/* General Styling */
+/* General Styles */
 body {
-  font-family: var(--font-family);
-  color: var(--text-color);
-  margin: 0;
-  padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* Header */
-header {
-  background: var(--primary-color);
-  color: var(--white);
-  text-align: center;
-  padding: 15px 0;
-  font-size: 1.8rem;
+/* Container */
+.container {
+    background: #ffffff;
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-top: 20px;
 }
 
-/* Hero Section */
-.hero {
-  position: relative;
-  width: 100%;
-  height: 60vh; /* Adjust for large screens */
-  background: url('../images/2151474220-2.webp') no-repeat center center/cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
 }
 
-/* Instead of ::after, adding an actual div overlay */
-.hero-overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.3); /* Adjust transparency as needed */
+label {
+    margin-top: 10px;
+    font-weight: bold;
 }
 
-/* Ensuring the image is hidden for larger screens */
-.hero img {
-  width: 100%;
-  display: none; /* Hide for large screens */
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
 }
 
-/* Content Container */
-.content-container {
-  display: flex;
-  justify-content: space-between;
-  padding: 2rem;
+/* Corrected Star Rating System */
+.rating {
+    display: flex;
+    flex-direction: row; /* Aligns stars correctly */
+    justify-content: start;
+    gap: 5px;
+    margin-top: 10px;
 }
 
-/* Data & Weather Sections */
-.data, .weather {
-  background: var(--white);
-  padding: 20px;
-  box-shadow: 0 4px 8px var(--shadow-color);
-  width: 45%;
-  position: relative;
-  z-index: 2; /* Ensuring it appears above the hero overlay */
+/* Hide radio buttons */
+.rating input {
+    display: none;
 }
 
-/* Weather Icon */
-.weather-icon {
-  width: 40px;
-  height: auto;
-  vertical-align: middle;
+/* Default star style */
+.rating label {
+    font-size: 30px;
+    cursor: pointer;
+    color: #ccc;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Highlight stars when hovered */
+.rating label:hover,
+.rating label:hover ~ label {
+    color: #FFD700;
+}
+
+/* Highlight stars when selected */
+.rating input:checked ~ label {
+    color: #FFD700;
+}
+
+/* Features */
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.features label {
+    cursor: pointer;
+}
+
+/* Button */
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
 }
 
 /* Footer */
 footer {
-  background: var(--primary-color);
-  color: var(--white);
-  text-align: center;
-  padding: 10px;
-  font-size: 0.9rem;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .hero {
-    height: auto;
-    background: none;
-  }
-
-  .hero img {
-    display: block;
-  }
-
-  .content-container {
-    flex-direction: column;
-    padding: 1rem;
-  }
-
-  .data, .weather {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    padding: 15px;
+    background-color: #343a40;
+    color: white;
     width: 100%;
-    margin-bottom: 1rem;
-  }
-
-  .weather-icon {
-    width: 50px;
-  }
 }
