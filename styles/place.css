@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
     background-color: #f8f9fa;
     margin: 0;
     padding: 0;
@@ -43,10 +43,11 @@ input, select, textarea {
 /* Corrected Star Rating System */
 .rating {
     display: flex;
-    flex-direction: row; /* Aligns stars correctly */
+    flex-direction: row-reverse; /* Ensures correct selection behavior */
     justify-content: start;
     gap: 5px;
     margin-top: 10px;
+    position: relative;
 }
 
 /* Hide radio buttons */
@@ -68,8 +69,9 @@ input, select, textarea {
     color: #FFD700;
 }
 
-/* Highlight stars when selected */
-.rating input:checked ~ label {
+/* Corrected: Highlight only selected stars and leftward */
+.rating input:checked ~ label,
+.rating input:checked ~ label ~ label {
     color: #FFD700;
 }
 
@@ -102,6 +104,9 @@ button:hover {
 
 /* Footer */
 footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     margin-top: 20px;
     font-size: 14px;
