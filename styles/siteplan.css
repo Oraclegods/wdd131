@@ -38,3 +38,28 @@ footer {
     padding: 10px;
     color: #000000;
 }
+
+/* Wireframe Grid Styles */
+
+.wireframe-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.wireframe-item img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .wireframe-grid {
+        grid-template-columns: 1fr;
+    }
+}
