@@ -8,6 +8,14 @@ document.addEventListener("DOMContentLoaded", function () {
         { id: "jj-1969", name: "Warp Equalizer", averagerating: 5.0 }
     ];
 
+
+    /* Required field validation */
+input:invalid,
+select:invalid {
+    border: 2px solid red;
+}
+
+    
     // Populate product dropdown
     const productSelect = document.getElementById("product");
     products.forEach(product => {
