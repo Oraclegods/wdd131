@@ -10,9 +10,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* Required field validation */
-input:invalid,
-select:invalid {
-    border: 2px solid red;
+     input:invalid,
+     border: 2px solid red;
 }
 
     
