@@ -8,43 +8,59 @@ document.addEventListener("DOMContentLoaded", function () {
         { id: "jj-1969", name: "Warp Equalizer", averagerating: 5.0 }
     ];
 
+    // Required field validation (fixed incorrect syntax)
+    const form = document.querySelector("form");
+    form.addEventListener("submit", function (event) {
+        const inputs = form.querySelectorAll("input[required], select[required]");
+        let valid = true;
+        
+        inputs.forEach(input => {
+            if (!input.value.trim()) {
+                valid = false;
+                input.style.border = "2px solid red";
+            } else {
+                input.style.border = "";
+            }
+        });
+        
+        if (!valid) {
+            event.preventDefault();
+            alert("Please fill in all required fields.");
+        }
+    });
 
-    /* Required field validation */
-     input:invalid,
-     border: 2px solid red;
-}
-
-    
     // Populate product dropdown
     const productSelect = document.getElementById("product");
-    products.forEach(product => {
-        let option = document.createElement("option");
-        option.value = product.id;
-        option.textContent = product.name;
-        productSelect.appendChild(option);
-    });
+    if (productSelect) {
+        products.forEach(product => {
+            let option = document.createElement("option");
+            option.value = product.id;
+            option.textContent = product.name;
+            productSelect.appendChild(option);
+        });
+    }
 
     // Fixing the star rating issue
     const ratingInputs = document.querySelectorAll(".rating input");
     ratingInputs.forEach(input => {
         input.addEventListener("change", function () {
-            // Remove filled effect from all labels
             document.querySelectorAll(".rating label").forEach(label => {
                 label.classList.remove("selected");
             });
-
-            // Add selected effect only to checked star
             this.nextElementSibling.classList.add("selected");
         });
     });
 
     // Update last modified date in footer
-    document.getElementById("last-modified").textContent = document.lastModified;
+    const lastModifiedElement = document.getElementById("last-modified");
+    if (lastModifiedElement) {
+        lastModifiedElement.textContent = document.lastModified;
+    }
 
     // Review counter using localStorage
     if (window.location.pathname.includes("review.html")) {
         let reviewCount = localStorage.getItem("reviewCount") || 0;
-        reviewCount++;
+        reviewCount = parseInt(reviewCount) + 1;
         localStorage.setItem("reviewCount", reviewCount);
         document.body.insertAdjacentHTML("beforeend", `<p>Reviews submitted: ${reviewCount}</p>`);
     }
