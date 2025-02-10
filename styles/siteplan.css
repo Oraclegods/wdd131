@@ -1,0 +1,40 @@
+/* styles.css */
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #FFFFFF;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #008000;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #008000;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+footer {
+    background-color: #FFD700;
+    text-align: center;
+    padding: 10px;
+    color: #000000;
+}
