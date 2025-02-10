@@ -1,7 +1,7 @@
 /* General Styles */
 body {
     font-family: 'Roboto', Arial, sans-serif;
-    background-color: #f8f9fa;
+    background-color: #d3c4d8; /* Lilac background */
     margin: 0;
     padding: 0;
     display: flex;
@@ -9,15 +9,24 @@ body {
     align-items: center;
 }
 
+/* Header */
+h1 {
+    background-color: #3d0936; /* Dark purple header */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+}
+
 /* Container */
 .container {
-    background: #ffffff;
+    background: #c8bccb; /* Soft lilac box */
     padding: 20px;
     width: 90%;
     max-width: 500px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     margin-top: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Form */
@@ -29,53 +38,50 @@ form {
 label {
     margin-top: 10px;
     font-weight: bold;
+    color: black;
 }
 
 input, select, textarea {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #999;
     border-radius: 5px;
     font-size: 16px;
 }
 
-/* ✅ Fix: Required field validation */
+/* Required Field Validation */
 input:invalid,
 select:invalid {
     border: 2px solid red;
 }
 
-/* ✅ Fix: Corrected Star Rating System */
+/* Star Rating */
 .rating {
     display: flex;
-    flex-direction: row-reverse; /* Ensures correct selection behavior */
+    flex-direction: row-reverse;
     justify-content: start;
     gap: 5px;
     margin-top: 10px;
     position: relative;
 }
 
-/* Hide radio buttons */
 .rating input {
     display: none;
 }
 
-/* Default star style */
 .rating label {
     font-size: 30px;
     cursor: pointer;
-    color: #ccc;
+    color: #999;
     transition: color 0.3s ease-in-out;
 }
 
-/* Hover effect */
 .rating label:hover,
 .rating label:hover ~ label {
     color: #FFD700;
 }
 
-/* ✅ Fix: Ensure selected stars stay highlighted */
 .rating input:checked ~ label,
 .rating input:checked ~ label ~ label {
     color: #FFD700;
@@ -92,11 +98,11 @@ select:invalid {
     cursor: pointer;
 }
 
-/* Button */
+/* Submit Button */
 button {
-    background-color: #007bff;
+    background-color: #3d0936;
     color: white;
-    padding: 10px;
+    padding: 12px;
     font-size: 18px;
     border: none;
     cursor: pointer;
@@ -105,19 +111,20 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #250623;
 }
 
 /* Footer */
 footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-top: 20px;
-    font-size: 14px;
-    padding: 15px;
-    background-color: #343a40;
+    background-color: #3d0936;
     color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
     width: 100%;
+    font-size: 14px;
+}
+
+footer span {
+    color: #ff69b4; /* Pink flower icon */
 }
