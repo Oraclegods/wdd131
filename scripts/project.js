@@ -1,4 +1,4 @@
-// Wait for the DOM to fully load before executing JS k
+// Wait for the DOM to fully load before executing JS 
 document.addEventListener("DOMContentLoaded", function () {
     console.log("JavaScript Loaded!");
 
