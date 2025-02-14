@@ -1,0 +1,32 @@
+/* Mobile Styles */
+
+.container {
+    width: 90%;
+}
+
+.nav-links {
+    display: none; /* Hide navigation links */
+}
+
+.hero {
+    padding: 60px 20px;
+}
+
+.hero h1 {
+    font-size: 2rem;
+}
+
+.quick-facts .facts-grid {
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-section {
+    flex-direction: column;
+    padding: 20px;
+}
+
+.footer {
+    flex-direction: column;
+    text-align: center;
+}
