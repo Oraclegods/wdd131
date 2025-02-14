@@ -122,3 +122,24 @@ footer {
     }
 }
 
+
+
+
+/* --- Economy & Innovation (Mobile) --- */
+
+.economy-main {
+    padding: 40px 10px;
+}
+
+.economy-title {
+    font-size: 28px;
+}
+
+.economy-grid {
+    grid-template-columns: 1fr; /* Stack cards on mobile */
+    gap: 15px;
+}
+
+.economy-card img {
+    height: 160px;
+}
