@@ -1,0 +1,113 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap');
+
+:root {
+    --green: #008000;
+    --gold: #FFD700;
+    --white: #FFFFFF;
+    --dark: #1E1E1E;
+    --gray: #F5F5F5;
+    --text: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color: var(--white);
+    color: var(--text);
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* HEADER */
+header {
+    background: var(--white);
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 600;
+}
+
+/* HERO SECTION */
+.hero {
+    background: var(--dark);
+    color: var(--white);
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+.explore-btn {
+    background: var(--green);
+    color: var(--white);
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* QUICK FACTS */
+.quick-facts {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.facts-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* INFO SECTIONS */
+.info-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0;
+}
+
+.info-box {
+    flex: 1;
+    background: var(--gray);
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+/* FOOTER */
+footer {
+    background: var(--gray);
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-between;
+}
