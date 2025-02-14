@@ -1,34 +1,18 @@
-document.addEventListener("DOMContentLoaded", () => {
-    // Mobile Navigation Toggle
-    const menuToggle = document.querySelector(".menu-toggle");
-    const navMenu = document.querySelector(".nav-menu");
+// Function to display an alert when clicking "Explore Now"
+function exploreMore() {
+    alert("Redirecting to explore Nigeria!");
+}
 
-    if (menuToggle && navMenu) {
-        menuToggle.addEventListener("click", () => {
-            navMenu.classList.toggle("active");
-        });
-    }
-
-    // Smooth Scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-
-            const targetId = this.getAttribute("href").substring(1);
-            const targetElement = document.getElementById(targetId);
-            
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop - 60,
-                    behavior: "smooth"
-                });
-            }
-        });
-    });
-
-    // Dynamic Year in Footer
-    const yearSpan = document.querySelector(".current-year");
-    if (yearSpan) {
-        yearSpan.textContent = new Date().getFullYear();
+// Subscribe form handling
+document.getElementById("subscribe-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+    const email = document.getElementById("email").value;
+    
+    if (email) {
+        localStorage.setItem("subscribedEmail", email);
+        alert(`Thank you for subscribing, ${email}!`);
+        document.getElementById("email").value = "";
+    } else {
+        alert("Please enter a valid email address.");
     }
 });
