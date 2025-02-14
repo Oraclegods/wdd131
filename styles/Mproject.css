@@ -93,3 +93,32 @@ footer {
     display: block;
     margin-top: 5px;
 }
+
+
+/* Culture Page - Mobile View */
+@media (max-width: 768px) {
+    .culture-main {
+        max-width: 90%;
+    }
+
+    .culture-title {
+        font-size: 1.8rem;
+    }
+
+    .culture-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .culture-card {
+        padding: 15px;
+    }
+
+    .culture-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .culture-card p {
+        font-size: 0.9rem;
+    }
+}
+
