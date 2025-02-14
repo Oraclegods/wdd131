@@ -217,3 +217,72 @@ button {
     color: #666;
 }
 
+
+
+/* --- Economy & Innovation Page Specific Styles --- */
+
+.economy-main {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.economy-title {
+    font-size: 32px;
+    color: #008000; /* Green to match the theme */
+    margin-bottom: 20px;
+}
+
+/* Economy Grid */
+.economy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 80%;
+    margin: auto;
+}
+
+/* Economy Cards */
+.economy-card {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.economy-card:hover {
+    transform: scale(1.05);
+}
+
+.economy-card img {
+    width: 100%;
+    height: 180px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.economy-card h3 {
+    margin-top: 15px;
+    font-size: 20px;
+    color: #333;
+}
+
+.economy-card p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* --- Responsive Design --- */
+
+@media (min-width: 768px) {
+    .economy-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .economy-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
