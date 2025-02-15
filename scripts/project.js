@@ -6,9 +6,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const navToggle = document.createElement("button");
     navToggle.innerText = "☰ Menu";
     navToggle.classList.add("nav-toggle");
+    navToggle.setAttribute("type", "button"); // Prevent form submission
     document.querySelector("header .container").prepend(navToggle);
 
     const navLinks = document.querySelector(".nav-links");
+
     navToggle.addEventListener("click", () => {
         navLinks.classList.toggle("show");
     });
@@ -21,25 +23,30 @@ document.addEventListener("DOMContentLoaded", function () {
         "The Nigerian film industry (Nollywood) is the second largest in the world."
     ];
 
-    document.querySelector(".explore-btn").addEventListener("click", () => {
-        const randomFact = funFacts[Math.floor(Math.random() * funFacts.length)];
-        alert(`🌍 Fun Fact: ${randomFact}`);
-    });
+    const exploreBtn = document.querySelector(".explore-btn");
+    if (exploreBtn) {
+        exploreBtn.addEventListener("click", () => {
+            const randomFact = funFacts[Math.floor(Math.random() * funFacts.length)];
+            alert(`🌍 Fun Fact: ${randomFact}`);
+        });
+    }
 
     // ========== 3. Save & Retrieve User Email (localStorage) ==========
     const emailInput = document.querySelector("input[type='email']");
-    const subscribeButton = document.querySelector("button");
+    const subscribeButton = document.querySelector(".subscribe-btn"); // Corrected selector
 
-    subscribeButton.addEventListener("click", () => {
-        const email = emailInput.value.trim();
-        if (email && email.includes("@")) {
-            localStorage.setItem("subscribedEmail", email);
-            alert("📩 Subscription Successful! Thank you.");
-            emailInput.value = ""; // Clear input field
-        } else {
-            alert("⚠️ Please enter a valid email address.");
-        }
-    });
+    if (subscribeButton) {
+        subscribeButton.addEventListener("click", () => {
+            const email = emailInput.value.trim();
+            if (email && email.includes("@")) {
+                localStorage.setItem("subscribedEmail", email);
+                alert("📩 Subscription Successful! Thank you.");
+                emailInput.value = ""; // Clear input field
+            } else {
+                alert("⚠️ Please enter a valid email address.");
+            }
+        });
+    }
 
     // ========== 4. Object & Array Interaction ==========
     const nigeriaInfo = {
